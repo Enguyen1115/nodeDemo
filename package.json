@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Enguyen1115/nodeDemo#readme",
   "dependencies": {
+    "formidable": "^2.0.1",
     "socket.io": "^4.5.1"
   }
 }
