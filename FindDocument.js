@@ -13,9 +13,16 @@ MongoClient.connect(url, function(err, db){
     // })
 
     //Find everything/anything in the array on the db
-    dbo.collection("customers").find({name: "ConnectMe Ltd"}).toArray(function(err, result){
+    // dbo.collection("customers").find({name: "ConnectMe Ltd"}).toArray(function(err, result){
+    //     if(err) throw err;
+    //     console.log(result[0].address)
+    //     db.close();
+    // })
+
+    //Only show the x amount entry
+    dbo.collection("customers").find({}).limit(3).toArray(function(err, result){
         if(err) throw err;
-        console.log(result[0].address)
+        console.log(result)
         db.close();
     })
 });
